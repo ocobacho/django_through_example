@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+<body>
+<h1>Through example</h1>
+<table>
+    <tr><td>through model id</td> <td>group id</td> <td>group name</td> <td>company id</td><td>company name</td></tr>
+    {% for i in queryset %}
+    <tr><td>{{i.id}}</td> <td>{{i.companygroup.id}}</td><td>{{ i.companygroup.name }}</td> <td>{{i.company.id}}</td><td>{{ i.company.name }}</td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>
